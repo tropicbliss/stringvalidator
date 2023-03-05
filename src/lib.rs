@@ -45,6 +45,12 @@ fn validate_non_control_character(alphabetic: &str) -> PyResult<bool> {
     Ok(validator::validate_non_control_character(alphabetic))
 }
 
+/// Creates a new CUID.
+#[pyfunction]
+fn create_cuid() -> PyResult<String> {
+    Ok(cuid::cuid2())
+}
+
 #[pymodule]
 fn string_validator(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(validate_email, m)?)?;
@@ -55,5 +61,6 @@ fn string_validator(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(validate_credit_card, m)?)?;
     m.add_function(wrap_pyfunction!(validate_phone, m)?)?;
     m.add_function(wrap_pyfunction!(validate_non_control_character, m)?)?;
+    m.add_function(wrap_pyfunction!(create_cuid, m)?)?;
     Ok(())
 }
