@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "string_validator"
-version = "0.1.0"
+version = "0.1.6"
 description = "A fast and correct Python string validator library"
 readme = "README.md"
 authors = [{ name = "tropicbliss", email = "tropicbliss@protonmail.com" }]
