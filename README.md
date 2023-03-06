@@ -1,6 +1,6 @@
 # string_validator
 
-A fast and correct Python string validator library. Also includes a [cuid](https://github.com/paralleldrive/cuid) generator for posterity.
+A fast and correct Python string validator library. Also includes a [cuid](https://github.com/paralleldrive/cuid) generator for the sake of posterity.
 
 Validates:
 
